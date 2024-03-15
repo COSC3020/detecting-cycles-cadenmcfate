@@ -16,3 +16,7 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+## Answer
+
+The strategy of this algorithm is to visit each node using the hasCycle function (complexity of $|V|$), and try to find a path back to that node using an adjusted version of depth first search. We already know DFS has a worst case complexity of $|V|$ when the graph is already of the form of an adjacency list. This gives us a worst case runtime complexity of $\Theta(|V|^2)$.
