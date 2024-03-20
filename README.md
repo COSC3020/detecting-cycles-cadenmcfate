@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/3yAkp-x3)
 # Detecting Cycles in Graphs
 
 Kruskal's Algorithm adds edges to the minimum spanning tree, unless they would
@@ -15,3 +16,7 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+## Answer
+
+The strategy of this algorithm is to visit each node using the hasCycle function (complexity of $|V|$), and try to find a path back to that node using an adjusted version of depth first search. My implementation of DFS has a runtime complexity of $|V|+|E|$, and since we are doing this searching operation for each node, this algorithm has a worst case runtime complexity of $\Theta(|V|*(|V|+|E|))$.
